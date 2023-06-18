@@ -10,3 +10,10 @@ class Bank:
     @staticmethod
     def check_total_loan_amount():
         return Bank.total_loan_amount
+
+
+class User:
+    def __init__(self, account_number, balance=0):
+        self.account_number = account_number
+        self.balance = balance
+        self.transaction_history = []
