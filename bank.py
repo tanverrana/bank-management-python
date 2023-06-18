@@ -110,3 +110,21 @@ print("_________After Transfer__________")
 print("Send", user2.name, "and received ", user1.name)
 print(user1.name, "balance: ", user1.check_balance())
 print(user2.name, "balance: ", user2.check_balance())
+
+user1.take_loan()
+print("_________After Loan__________")
+print(user1.name, "take a loan")
+print(user1.name, "balance: ", user1.check_balance())
+print(user2.name, "balance: ", user2.check_balance())
+print("_________Bank Balance(Admin)__________")
+print("Total Balance: ", admin.check_bank_balance())
+print("Total Loan amount: ", admin.check_total_loan_amount())
+print("_________Transaction History__________")
+print("Transaction History for ", user1.name,
+      user1.check_transaction_history())
+print("Transaction History for ", user2.name,
+      user2.check_transaction_history())
+
+print("_________OFF Loan Feature__________")
+admin.loan_feature_off()
+user1.take_loan()
