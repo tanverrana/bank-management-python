@@ -66,3 +66,7 @@ class User:
 class Admin:
     def create_user_account(self, account_number, initial_deposit=0):
         return User(account_number, initial_deposit)
+
+    @staticmethod
+    def check_bank_balance():
+        return Bank.check_bank_balance()
