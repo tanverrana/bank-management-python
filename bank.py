@@ -13,7 +13,8 @@ class Bank:
 
 
 class User:
-    def __init__(self, account_number, balance=0):
+    def __init__(self, name, account_number, balance=0):
+        self.name = name
         self.account_number = account_number
         self.balance = balance
         self.transaction_history = []
@@ -74,3 +75,18 @@ class Admin:
     @staticmethod
     def check_total_loan_amount():
         return Bank.check_total_loan_amount()
+
+    @staticmethod
+    def loan_feature_on():
+        Bank.loan_feature_enabled = True
+        print("Loan feature On.")
+
+    @staticmethod
+    def loan_feature_off():
+        Bank.loan_feature_enabled = False
+        print("Loan feature off.")
+
+
+admin = Admin()
+user1 = admin.create_user_account('Tanver Rana', 1, initial_deposit=1000)
+user2 = admin.create_user_account('Abdur Sobur', 2, initial_deposit=2000)
