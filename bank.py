@@ -58,3 +58,6 @@ class User:
                 print("Loan limit crossed!")
         else:
             print("The loan feature is currently disabled.So waiting...")
+
+    def check_transaction_history(self):
+        return self.transaction_history
