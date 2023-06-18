@@ -17,3 +17,16 @@ class User:
         self.account_number = account_number
         self.balance = balance
         self.transaction_history = []
+
+    def deposit(self, amount):
+        self.balance += amount
+        Bank.bank_balance += amount
+        self.transaction_history.append(f'Deposited amount: {amount}')
+
+    def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+            Bank.bank_balance -= amount
+            self.transaction_history.append(f'Withdrew amount: {amount}')
+        else:
+            print("Insufficient funds! So please keep dollar in your own account")
