@@ -6,3 +6,7 @@ class Bank:
     @staticmethod
     def check_bank_balance():
         return Bank.bank_balance
+
+    @staticmethod
+    def check_total_loan_amount():
+        return Bank.total_loan_amount
