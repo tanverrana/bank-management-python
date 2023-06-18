@@ -41,3 +41,6 @@ class User:
                 f'Received {amount} from account {self.account_number}')
         else:
             print("Insufficient funds!")
+
+    def check_balance(self):
+        return self.balance
