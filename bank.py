@@ -44,3 +44,17 @@ class User:
 
     def check_balance(self):
         return self.balance
+
+    def take_loan(self):
+        if Bank.loan_feature_enabled:
+            loan_limit = self.balance * 2
+            if Bank.total_loan_amount < loan_limit:
+                self.balance += self.balance
+                Bank.bank_balance += self.balance
+                self.transaction_history.append(
+                    f'Took a loan of amount: {self.balance}')
+                Bank.total_loan_amount += self.balance
+            else:
+                print("Loan limit crossed!")
+        else:
+            print("The loan feature is currently disabled.So waiting...")
