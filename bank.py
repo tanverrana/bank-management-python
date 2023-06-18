@@ -70,3 +70,7 @@ class Admin:
     @staticmethod
     def check_bank_balance():
         return Bank.check_bank_balance()
+
+    @staticmethod
+    def check_total_loan_amount():
+        return Bank.check_total_loan_amount()
