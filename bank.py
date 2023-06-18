@@ -65,8 +65,8 @@ class User:
 
 
 class Admin:
-    def create_user_account(self, account_number, initial_deposit=0):
-        return User(account_number, initial_deposit)
+    def create_user_account(self, name, account_number, initial_deposit=0):
+        return User(name, account_number, initial_deposit)
 
     @staticmethod
     def check_bank_balance():
@@ -88,5 +88,8 @@ class Admin:
 
 
 admin = Admin()
-user1 = admin.create_user_account('Tanver Rana', 1, initial_deposit=1000)
-user2 = admin.create_user_account('Abdur Sobur', 2, initial_deposit=2000)
+user1 = admin.create_user_account('Tanver Rana', 101, initial_deposit=15000)
+user2 = admin.create_user_account('Abdur Sobur', 102, initial_deposit=12000)
+print('_______User Details__________')
+print("Name:", user1.name, '->', "Account Number:", user1.account_number)
+print("Name:", user2.name, '->', "Account Number:", user2.account_number)
